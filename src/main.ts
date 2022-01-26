@@ -8,7 +8,7 @@ const resultEl = document.querySelector<HTMLHeadingElement>("#result")!
 resultEl.classList.add('hide');
 const canvas = document.querySelector<HTMLCanvasElement>('canvas')!
 canvas.width = 1024
-canvas.height = 768
+canvas.height = 576
 
 const ctx = canvas.getContext('2d')!
 const INVADER_WIDTH = 32.75
@@ -292,6 +292,7 @@ function animate() {
       setTimeout(() => {
         grids.splice(gIndex, 1);
       }, 0);
+
     }
   });
 
@@ -361,10 +362,11 @@ function animate() {
     player.rotation = 0
   }
 
-  if (gridGenerationGap % Math.floor(Math.random() * 500 + 300) === 0) {
+  if (gridGenerationGap % Math.floor(Math.random() * 500 + 300) === 0 || grids.length <= 0) {
     grids.push(new Grid());
     gridGenerationGap = 0
   }
+
   frames++;
   gridGenerationGap++;
 }

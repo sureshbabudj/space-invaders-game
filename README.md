@@ -13,10 +13,10 @@ Use git or the download button (on the right) to download the game source code. 
 Run `npm run dev` in your IDE, the game should start, if not check errors with your browser debugging utility.
 
 ### Graphics/Textures
-The game graphics are packed in img folder. player, platform and clouds graphics are included
+The game graphics are packed in img folder. rocket and alien svgs are included
 
 ### Architecture
-The game mimics MARIO Game :)
+The game mimics Classic Space Invaders Game :)
 
 ### Publish
 Published with VITE
